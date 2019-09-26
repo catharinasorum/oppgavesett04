@@ -23,6 +23,16 @@ body {
     font-weight: 700;
 }
 /* Oppgave 5 */
+#moensterboks {
+    background-color: #442334;
+    height: 500px;
+    width: 500px;
+}
+
+#sirkel {
+    background-color: #803F50;
+}
+
 /* Oppgave 6 */
 /* Oppgave 7 */
 .blaaBakgrunn {
