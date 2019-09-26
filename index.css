@@ -7,6 +7,21 @@ body {
 /* Oppgave 2 */
 /* Oppgave 3 */
 /* Oppgave 4 */
+#svenskeGrid {
+    display: grid;
+    width: 70%;
+    grid-auto-flow: column;
+    background-color: #006BA8;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+#svenskeGrid p {
+    background-color: #FECD01;
+    padding: 1rem;
+    font-weight: 700;
+}
 /* Oppgave 5 */
 /* Oppgave 6 */
 /* Oppgave 7 */
