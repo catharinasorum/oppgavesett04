@@ -27,10 +27,16 @@ body {
     background-color: #442334;
     height: 500px;
     width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    grid-template-rows: repeat(22, 1fr);
+    gap: 10px;
 }
 
 #sirkel {
     background-color: #803F50;
+    border-radius: 50%;
 }
 
 /* Oppgave 6 */
