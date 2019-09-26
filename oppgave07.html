@@ -12,9 +12,10 @@
         <nav id="menu"></nav>
 
         <h1>Oppgave 7</h1>
-        <button id="btnBlaa">Blå</button>
-        <button id="btnOransje">Oransje</button>
-        <!--Ikke klar-->
+        <div id="knapper">
+            <button id="btnBlaa">Blå</button>
+            <button id="btnOransje">Oransje</button>
+        </div>
 
 
 
@@ -22,23 +23,24 @@
         <script>
 
 
-            const btnBlaa = document.querySelector("#btnBlaa");
-            const btnOransje = document.querySelector("#btnOransje");
+            const knapper = document.querySelectorAll("#knapper > button");
 
             function byttFarge(evt) {
                 const knapp = evt.target;
 
-                if(btnBlaa.click) {
+                if(knapp.id === "btnBlaa") {
                     document.body.className = "blaaBakgrunn";
-                } else if(btnOransje.click) {
+                } else if(knapp.id === "btnOransje") {
                     document.body.className = "oransjeBakgrunn";
-                } else {
-                    document.body.style.backgroundColor = "white";
                 }
             }
 
-            btnOransje.addEventListener("click", byttFarge);
-            btnBlaa.addEventListener("click", byttFarge);
+
+            for(const knapp of knapper) {
+                knapp.addEventListener("click", byttFarge);
+            }
+
+            
 
             
         </script>

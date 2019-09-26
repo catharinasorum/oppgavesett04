@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgave 3 - Hester </title>
+        <link rel="stylesheet" href="./menu.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <nav id="menu"></nav>
+
+        <h1>Oppgave 3</h1>
+
+        <ol id="hesteliste"></ol>
+
+
+        <script src="./menu.js"></script>
+        <script>
+            const hesteliste = document.querySelector("#hesteliste");
+            const hester = [
+                "Brenne Blissi",
+                "Trø Hera",
+                "Bia Balderina",
+                "Hvatt Ronja",
+                "Kagge Lina"
+            ];
+             
+             for(const hest of hester) {
+                hesteliste.innerHTML += `
+                    <li>${hest}</li>
+                `;
+             }
+
+
+
+        </script>
+    </body>
+</html>
