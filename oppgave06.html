@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgave 6</title>
+        <link rel="stylesheet" href="./menu.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <nav id="menu"></nav>
+
+        <h1>Oppgave 6 - Gjett tallet!</h1>
+        
+
+        <script src="./menu.js"></script>
+        
+        <script>
+            const tallet = 50;
+            const inpDittSvar = prompt("Oppgi et tall mellom 1 og 100");
+
+            const dittSvar = Number(inpDittSvar);
+
+            if(dittSvar < 50) {
+                document.write("<h2>Tallet er lite</h2>");
+            } else if (dittSvar > 50) {
+                document.write("<h2>Tallet er stort</h2>");
+            } else {
+                document.write("<h2>Tallet er akkurat midth på</h2>")
+            }
+        </script>
+    </body>
+</html>
