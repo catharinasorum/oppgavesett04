@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgave 9</title>
+        <link rel="stylesheet" href="./menu.css">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <nav id="menu"></nav>
+
+        <h1>Oppgave 9</h1>
+
+        <h2>A</h2>
+        <div id="oppg9A">
+            
+        </div>
+        <h2>B</h2>
+        <div id="oppg9B">
+
+        </div>
+        <h2>C</h2>
+        <div id="oppg9C">
+            <p>Det høyeste tallet er</p>
+
+        </div>
+
+        <script src="./menu.js"></script>
+        
+        <script>
+            const tallene = [20, 31, 9, 4, 32, 43, 12, 4, 13];
+
+            /* A */
+            for(const tall of tallene) {
+                oppg9A.innerHTML = `
+                <p>Alle tallene lagt sammen = ${tall}</p>
+                `;
+            }
+
+            /* B */
+            const overTjue = tallene.filter(tallene => 20);
+            oppg9B.innerHTML = `
+                <p>Alle tallene som er større enn 20: ${overTjue}</p>
+            `;
+
+            
+            /* C */
+            function hoyesteTall(arr) {
+                return Math.max.apply(null, arr);
+            }
+            
+            oppg9C.innerHTML = `
+                <p>Det høyeste tallet er: ${hoyesteTall(tallene)}</p>
+            `;
+
+
+            
+        </script>
+    </body>
+</html>
