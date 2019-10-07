@@ -3,9 +3,6 @@ body {
     font-family: sans-serif;
 }
 
-/* Oppgave 1 */
-/* Oppgave 2 */
-/* Oppgave 3 */
 /* Oppgave 4 */
 #svenskeGrid {
     display: grid;
@@ -14,7 +11,6 @@ body {
     background-color: #006BA8;
     justify-content: center;
     gap: 1rem;
-    
 }
 
 #svenskeGrid p {
@@ -39,7 +35,6 @@ body {
     border-radius: 50%;
 }
 
-/* Oppgave 6 */
 /* Oppgave 7 */
 .blaaBakgrunn {
     background-color: lightblue;
