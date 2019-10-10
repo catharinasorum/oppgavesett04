@@ -14,11 +14,17 @@
         </header>
 
         <main>
-            <h1>Oppgave 8 - PRIMM #1</h1>
+            <h1>Oppgave 8 - Timefravær</h1>
             
-            <p>Oppgaven er som følger:</p>
-            <p>Lage et program i Scrimba som regner ut om elever på videregående skole har for mange timer fravær i et fag, altså om de er over eller under fraværsgrensa. Fraværsgrensa er på 10%. Koden skal starte med variablene timetall (antall timer i faget, feks 140) og fravaer (antall timer eleven har vært borte), og gi en melding til brukeren om eleven er over eller under fraværsgrensa. </p>
+            <p>Mangler:</p>
             <p>Lag sjekker som kontrollerer at timetall og fravaer inneholder gyldige verdier. Det kan ikke være negative tall, fraværet kan ikke være større enn antall timer i faget. Hvis verdigene ikke er gyldige skal programmet skrive melding til brukeren og ikke gå videre.</p>
+            <form id="formFravaer">
+                <input id="inpTimetall" type="number" placeholder="Antall timer i faget?" required autocomplete="off">
+                <input id="inpFravaer" type="number" placeholder="Antall timer fravær?" required autocomplete="off">
+                <button type="submit">Regn ut</button>
+            </form>
+            
+            <div id="outFravaer"></div>
 
         </main>
     
@@ -30,6 +36,30 @@
         <script src="./menu.js"></script>
         
         <script>
+            const formFravaer = document.querySelector("#formFravaer");
+            const inpTimetall = document.querySelector("#inpTimetall");
+            const inpFravaer = document.querySelector("#inpFravaer");
+            const outFravaer = document.querySelector("#outFravaer");
+
+            function regnUtFravaer(evt) {
+                evt.preventDefault();
+                
+                if(inpTimetall.value * 0.10 <= inpFravaer.value ) {
+                    outFravaer.innerHTML = `
+                        <p>Du er over fraværsgrensa! Skjerp deg!</p>
+                    `;
+                
+                } else {
+                    outFravaer.innerHTML = `
+                        <p>Du er under fraværsgrensa! Fortsett med det!</p>
+                    `;
+                }
+
+                formFravaer.reset();
+            }
+
+            formFravaer.addEventListener("submit", regnUtFravaer);
+
             
         </script>
     </body>

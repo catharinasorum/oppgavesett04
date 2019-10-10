@@ -43,11 +43,13 @@
             const tallene = [20, 31, 9, 4, 32, 43, 12, 4, 13];
 
             /* A */
+            let sum = 0;
             for(const tall of tallene) {
-                oppg9A.innerHTML = `
-                <p>Alle tallene lagt sammen = ${tall}</p>
-                `;
+                sum += tall;
             }
+            oppg9A.innerHTML = `
+                <p>Alle tallene lagt sammen = ${sum}</p>
+            `;
 
             /* B */
             const overTjue = tallene.filter(tallene => 20);
