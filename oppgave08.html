@@ -42,8 +42,10 @@
 
             function regnUtFravaer(evt) {
                 evt.preventDefault();
+                const timetall = Number(inpTimetall.value);
+                const fravaer = Number(inpFravaer.value);
                 
-                if(inpTimetall.value * 0.10 <= inpFravaer.value ) {
+                if(timetall * 0.10 <= fravaer) {
                     outFravaer.innerHTML = `
                         <p>Du er over fraværsgrensa! Skjerp deg!</p>
                     `;
@@ -54,7 +56,7 @@
                     `;
                 }
 
-                if(inpFravaer.value > inpTimetall.value) {
+                if(fravaer > timetall) {
                     outFravaer.innerHTML = `
                         <p id="feilmelding">Du har vel ikke flere timer fravær enn antall timer i faget? Prøv på nytt!</p>
                     `;
