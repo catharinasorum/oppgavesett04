@@ -73,5 +73,13 @@ footer {
 }
 
 /* Oppgave 8 */
+#inpTimetall, #inpFravaer {
+    outline: none;
+}
+
+#feilmelding {
+    color: red;
+    font-weight: 700;
+}
 /* Oppgave 9 */
 /* Oppgave 10 */

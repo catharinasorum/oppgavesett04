@@ -15,12 +15,11 @@
 
         <main>
             <h1>Oppgave 8 - Timefravær</h1>
+            <p>Her kan du regne ut ditt fravær i et fag du har. Husk gyldige verdier! Så finner du ut om du er over eller under fraværsgrensa. fraværsgrensa er på 10%!</p>
             
-            <p>Mangler:</p>
-            <p>Lag sjekker som kontrollerer at timetall og fravaer inneholder gyldige verdier. Det kan ikke være negative tall, fraværet kan ikke være større enn antall timer i faget. Hvis verdigene ikke er gyldige skal programmet skrive melding til brukeren og ikke gå videre.</p>
             <form id="formFravaer">
-                <input id="inpTimetall" type="number" placeholder="Antall timer i faget?" required autocomplete="off">
-                <input id="inpFravaer" type="number" placeholder="Antall timer fravær?" required autocomplete="off">
+                <input id="inpTimetall" type="number" min="0" placeholder="Antall timer i faget?" required autocomplete="off">
+                <input id="inpFravaer" type="number" min="0" placeholder="Antall timer fravær?" required autocomplete="off">
                 <button type="submit">Regn ut</button>
             </form>
             
@@ -52,6 +51,12 @@
                 } else {
                     outFravaer.innerHTML = `
                         <p>Du er under fraværsgrensa! Fortsett med det!</p>
+                    `;
+                }
+
+                if(inpFravaer.value > inpTimetall.value) {
+                    outFravaer.innerHTML = `
+                        <p id="feilmelding">Du har vel ikke flere timer fravær enn antall timer i faget? Prøv på nytt!</p>
                     `;
                 }
 
